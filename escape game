@@ -99,10 +99,7 @@ class mygame(arcade.Window):
     
         
       
-#    def pomp_window(self):
-#        while 1:#len(self.bomplist)==0:
-#            e.msgbox('now, you have entered the game, you need to beat the monster by the bomp')
-#            break
+
 def password_guess(truepassword):
     def password_input():
         try:
@@ -124,12 +121,10 @@ def password_guess(truepassword):
     tkwindow.geometry('300x300')
     label=tkinter.Label(tkwindow, text="guess the password")
     label.grid(row = 0)
-    text = StringVar()   #设置和接收输入框的内容
-    text.set('')         #输入框的默认内容
+    text = StringVar()   #set and recieve the concept in the box
+    text.set('')         
     entry = Entry(tkwindow,bg = '#ff0000')
-                                   #entry单行输入框,bg为输入框背景色,font文本字体
-                                   #fg 文字颜色。值为颜色或为颜色代码，如：'red','#ff0000'
-    entry['textvariable'] = text   #使用textvariable将变量与Entry绑定
+    entry['textvariable'] = text   #make the text to be with entry
     entry.grid(row = 0, column =5 ,ipadx=5,ipady=5)
     button1=tkinter.Button(tkwindow, text='yes', command=password_input)
     button1.grid(row=3, column=0)
